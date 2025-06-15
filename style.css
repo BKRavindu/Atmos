@@ -177,6 +177,13 @@ body {
   margin-bottom: 4px;
 }
 
+h3 {
+  font-size: 13px;
+  text-align: left;
+  color: white;
+}
+
+
 .temp {
   font-size: 16px;
 }
