@@ -1,25 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atmos</title>
-    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" /></head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Atmos</title>
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+</head>
 <body>
+  <main class="main-container">
+    <!-- Search Header -->
+    <header class="input-container">
+      <input class="city-input" placeholder="Enter city ..." type="text" id="city-input" />
+      <button class="search-btn">
+        <span class="material-symbols-outlined">search</span>
+      </button>
+    </header>
 
-    <main class="main-container">
-        <header class="input-container">
-            <input class="city-input" placeholder="Enter city ..." type="text" id>
-            <button class="search-btn">
-                <span class="material-symbols-outlined">
-                    search
-                </span>
-            </button>
-        </header>
+    <!-- Main Weather Section (Top Content) -->
+    <section class="weather-top">
+      <!-- Left Block -->
+      <div class="weather-left">
+        <div class="location">
+          <span class="material-symbols-outlined icon">location_on</span>
+          <h4 class="country-txt">Colombo</h4>
+        </div>
+        <h5 class="current-date-txt reguler-txt">Sun, 15 June</h5>
+        <img class="weather-icon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="weather" />
+      </div>
 
-    </main>
-    
+      <!-- Right Block -->
+      <div class="weather-right">
+        <div class="info-row">
+          <span class="material-symbols-outlined icon">thermostat</span>
+          <h2 class="temperature">32°C</h2>
+        </div>
+        <div class="info-row">
+          <span class="material-symbols-outlined icon">wb_sunny</span>
+          <p class="weather-desc reguler-txt">Sunny</p>
+        </div>
+        <div class="info-row">
+          <span class="material-symbols-outlined icon">humidity_percentage</span>
+          <p class="humidity reguler-txt">Humidity: 60%</p>
+        </div>
+        <div class="info-row">
+          <span class="material-symbols-outlined icon">air</span>
+          <p class="wind reguler-txt">Wind: 15 km/h</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Block: 10-Day Forecast -->
+    <section class="forecast-container">
+      <div class="forecast-item">
+        <p class="day">Mon</p>
+        <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="forecast" />
+        <p class="temp">30°C</p>
+      </div>
+      <div class="forecast-item">
+        <p class="day">Tue</p>
+        <img src="https://openweathermap.org/img/wn/03d@2x.png" alt="forecast" />
+        <p class="temp">29°C</p>
+      </div>
+      <div class="forecast-item">
+        <p class="day">Wed</p>
+        <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="forecast" />
+        <p class="temp">28°C</p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
