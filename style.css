@@ -23,7 +23,6 @@ body {
 
 .main-container {
   width: 800px;
-  height: auto;
   background-color: #1a1a1a;
   border-radius: 15px;
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
@@ -88,53 +87,62 @@ body {
   gap: 20px;
 }
 
-/* Left Weather Info */
+/* Left Block */
 .weather-left {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center; 
+  justify-content: center;
+  text-align: center; 
   gap: 12px;
-  color: white;
-  width: 45%;
-  padding: 10px;
 }
+
 
 .location {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
 }
 
-/* Weather Icon */
-.weather-icon {
-  width: 80px;
-  height: 80px;
-}
 
-/* Right Weather Info */
-.weather-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  color: white;
-  width: 55%;
-  padding: 10px;
-  gap: 10px;
+.weather-icon {
+  width: 100px;
+  height: 100px;
 }
 
 .temperature {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 32px;
 }
 
-.info-row {
+.weather-desc {
+  font-size: 16px;
+}
+
+/* Right Block */
+.weather-right {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 15px;
+  color: white;
+  flex-grow: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 20px;
+}
+
+.info-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
-.icon {
+.info-item span {
   font-size: 22px;
   color: #ccc;
 }
