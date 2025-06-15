@@ -19,40 +19,60 @@
       </button>
     </header>
 
-    <!-- Main Weather Section (Top Content) -->
+    <!-- Main Weather Section -->
     <section class="weather-top">
       <!-- Left Block -->
       <div class="weather-left">
         <div class="location">
-          <span class="material-symbols-outlined icon">location_on</span>
-          <h4 class="country-txt">Colombo</h4>
+          <span class="material-symbols-outlined">location_on</span>
+          <h4>Colombo</h4>
         </div>
-        <h5 class="current-date-txt reguler-txt">Sun, 15 June</h5>
+        <p class="current-date-txt reguler-txt">Sun, 15 June</p>
         <img class="weather-icon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="weather" />
+        <h2 class="temperature">32°C</h2>
+        <p class="weather-desc reguler-txt">
+          <span class="material-symbols-outlined">wb_sunny</span> Sunny
+        </p>
       </div>
 
       <!-- Right Block -->
       <div class="weather-right">
-        <div class="info-row">
-          <span class="material-symbols-outlined icon">thermostat</span>
-          <h2 class="temperature">32°C</h2>
+        <div class="info-item">
+          <span class="material-symbols-outlined">humidity_percentage</span>
+          <p>Humidity: 60%</p>
         </div>
-        <div class="info-row">
-          <span class="material-symbols-outlined icon">wb_sunny</span>
-          <p class="weather-desc reguler-txt">Sunny</p>
+        <div class="info-item">
+          <span class="material-symbols-outlined">air</span>
+          <p>Wind: 15 km/h</p>
         </div>
-        <div class="info-row">
-          <span class="material-symbols-outlined icon">humidity_percentage</span>
-          <p class="humidity reguler-txt">Humidity: 60%</p>
+        <div class="info-item">
+          <span class="material-symbols-outlined">wb_iridescent</span>
+          <p>UV Index: Moderate</p>
         </div>
-        <div class="info-row">
-          <span class="material-symbols-outlined icon">air</span>
-          <p class="wind reguler-txt">Wind: 15 km/h</p>
+        <div class="info-item">
+          <span class="material-symbols-outlined">wb_twilight</span>
+          <p>Sun rise: 6:00 AM</p>
+        </div>
+        <div class="info-item">
+          <span class="material-symbols-outlined">water_lux</span>
+          <p>Sun set: 6:30 PM</p>
+        </div>
+        <div class="info-item">
+          <span class="material-symbols-outlined">nights_stay</span>
+          <p>Moon rise: 7:00 PM</p>
+        </div>
+        <div class="info-item">
+          <span class="material-symbols-outlined">bedtime</span>
+          <p>Moon set: 5:30 AM</p>
+        </div>
+        <div class="info-item">
+          <span class="material-symbols-outlined">brightness_2</span>
+          <p>illumination: 82</p>
         </div>
       </div>
     </section>
 
-    <!-- Bottom Block: 10-Day Forecast -->
+    <!-- Forecast Section -->
     <section class="forecast-container">
       <div class="forecast-item">
         <p class="day">Mon</p>
@@ -66,6 +86,21 @@
       </div>
       <div class="forecast-item">
         <p class="day">Wed</p>
+        <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="forecast" />
+        <p class="temp">28°C</p>
+      </div>
+      <div class="forecast-item">
+        <p class="day">Thu</p>
+        <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="forecast" />
+        <p class="temp">29°C</p>
+      </div>
+      <div class="forecast-item">
+        <p class="day">Fri</p>
+        <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="forecast" />
+        <p class="temp">30°C</p>
+      </div>
+      <div class="forecast-item">
+        <p class="day">Sat</p>
         <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="forecast" />
         <p class="temp">28°C</p>
       </div>
