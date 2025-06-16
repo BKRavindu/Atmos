@@ -1,16 +1,26 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atmos</title>
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"/>
-  <link rel="stylesheet" href="./src/style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./src/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
 </head>
-  <body>
-    <div id="app"></div>
+
+<body>
+  <main class="main-container">
+    <!-- Search Header -->
+    <header class="input-container">
+      <input class="city-input" placeholder="Enter city ..." type="text" id="city-input" />
+      <button class="search-btn">
+        <span class="material-symbols-outlined">search</span>
+      </button>
+    </header>
     <script type="module" src="/src/main.js"></script>
-  </body>
+  </main>
+</body>
 </html>
