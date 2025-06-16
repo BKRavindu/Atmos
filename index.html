@@ -1,16 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Atmos</title>
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="./src/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="./src/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
   <main class="main-container">
     <!-- Search Header -->
@@ -21,6 +19,7 @@
       </button>
     </header>
 
+    <!-- Main Weather Section -->
     <section class="weather-top">
       <!-- Left Block -->
       <div class="weather-left">
@@ -35,7 +34,78 @@
           <span class="material-symbols-outlined">wb_sunny</span> Sunny
         </p>
       </div>
-    <script type="module" src="/src/main.js"></script>
+
+      <!-- Right Block -->
+      <div class="weather-right">
+        <div class="info-item">
+          <span class="material-symbols-outlined">humidity_percentage</span>
+          <p>Humidity: 60%</p>
+        </div>
+        <div class="info-item">
+          <span class="material-symbols-outlined">air</span>
+          <p>Wind: 15 km/h</p>
+        </div>
+        <div class="info-item">
+          <span class="material-symbols-outlined">wb_iridescent</span>
+          <p>UV Index: Moderate</p>
+        </div>
+        <div class="info-item">
+          <span class="material-symbols-outlined">wb_twilight</span>
+          <p>Sun rise: 6:00 AM</p>
+        </div>
+        <div class="info-item">
+          <span class="material-symbols-outlined">water_lux</span>
+          <p>Sun set: 6:30 PM</p>
+        </div>
+        <div class="info-item">
+          <span class="material-symbols-outlined">nights_stay</span>
+          <p>Moon rise: 7:00 PM</p>
+        </div>
+        <div class="info-item">
+          <span class="material-symbols-outlined">bedtime</span>
+          <p>Moon set: 5:30 AM</p>
+        </div>
+        <div class="info-item">
+          <span class="material-symbols-outlined">brightness_2</span>
+          <p>illumination: 82</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forecast Section -->
+    <h3>6 Days Forecast</h3>
+    <section class="forecast-container">
+      <div class="forecast-item">
+        <p class="day">Mon</p>
+        <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="forecast" />
+        <p class="temp">30°C</p>
+      </div>
+      <div class="forecast-item">
+        <p class="day">Tue</p>
+        <img src="https://openweathermap.org/img/wn/03d@2x.png" alt="forecast" />
+        <p class="temp">29°C</p>
+      </div>
+      <div class="forecast-item">
+        <p class="day">Wed</p>
+        <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="forecast" />
+        <p class="temp">28°C</p>
+      </div>
+      <div class="forecast-item">
+        <p class="day">Thu</p>
+        <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="forecast" />
+        <p class="temp">29°C</p>
+      </div>
+      <div class="forecast-item">
+        <p class="day">Fri</p>
+        <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="forecast" />
+        <p class="temp">30°C</p>
+      </div>
+      <div class="forecast-item">
+        <p class="day">Sat</p>
+        <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="forecast" />
+        <p class="temp">28°C</p>
+      </div>
+    </section>
   </main>
 </body>
 </html>
