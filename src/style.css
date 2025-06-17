@@ -25,15 +25,16 @@ body {
 .main-container {
   width: 90%;
   max-width: 800px;
-  background-color: #1a1a1a;
-  border-radius: 15px;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   animation: fadeIn 0.8s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .input-container {
@@ -45,19 +46,20 @@ body {
 
 .city-input {
   width: 100%;
-  padding: 12px 50px 12px 20px;
-  border-radius: 99px;
+  padding: 14px 50px 14px 20px;
+  border-radius: 999px;
   border: 2px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.06);
   outline: none;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
   transition: 0.3s ease;
+  backdrop-filter: blur(6px);
 }
 
 .city-input:focus {
-  border-color: rgba(255, 255, 255, 0.4);
-  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .city-input::placeholder {
@@ -72,7 +74,7 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 24px;
   padding: 4px;
   transition: 0.2s ease;
@@ -96,8 +98,8 @@ body {
 /* Left Block */
 .weather-left {
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 15px;
+  padding: 15px;
   color: white;
   width: 250px;
   height: 290px;
@@ -109,6 +111,7 @@ body {
   gap: 12px;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
 }
 
 .location {
@@ -116,6 +119,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 6px;
+  font-size: 18px;
 }
 
 .weather-icon {
@@ -130,38 +134,50 @@ body {
 
 .temperature {
   font-size: 32px;
+  color: #ffd369;
 }
 
 .weather-desc {
   font-size: 16px;
+  font-weight: 400;
+  color: #ddd;
 }
 
 /* Right Block */
 .weather-right {
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  padding: 15px;
+  border-radius: 15px;
+  padding: 20px;
   color: white;
   width: 100%;
   max-width: 500px;
   height: 290px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px 20px;
+  gap: 14px 20px;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
 }
 
 .info-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: 0.3s ease;
 }
 
 .info-item span {
   font-size: 22px;
   color: #ccc;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
+}
+
+.info-item:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .info-item:hover span {
@@ -174,24 +190,26 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
   margin-top: 20px;
   animation: fadeInUp 1s ease-in-out;
 }
 
 .forecast-item {
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 12px;
+  padding: 12px;
   text-align: center;
   width: 70px;
   color: white;
   flex-grow: 1;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
+  backdrop-filter: blur(6px);
 }
 
 .forecast-item:hover {
   transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .forecast-item img {
@@ -201,17 +219,19 @@ body {
 
 .day {
   font-size: 14px;
+  font-weight: 500;
   margin-bottom: 4px;
+}
+
+.temp {
+  font-size: 16px;
+  color: #ffd369;
 }
 
 h3 {
   font-size: 13px;
   text-align: left;
   color: white;
-}
-
-.temp {
-  font-size: 16px;
 }
 
 /* Animations */
