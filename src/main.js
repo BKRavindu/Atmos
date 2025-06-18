@@ -120,10 +120,23 @@ async function getWeather(city) {
       }
     });
   } catch (err) {
-    alert("City not found or API error.");
-    console.error(err);
+    showToast("City not found.");
   }
 }
+
+//Error message
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.classList.add("show");
+  toast.classList.remove("hide");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+    toast.classList.add("hide");
+  }, 3000);
+}
+
 
 function getUvCategory(uv) {
   if (uv <= 2) return "Low";

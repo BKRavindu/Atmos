@@ -11,12 +11,14 @@
 body {
   background: url(./assets/background.jpg) no-repeat center center/cover;
   width: 100%;
-  height: 100dvh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  padding: 40px 0; 
+  overflow-x: hidden; 
+  overflow-y: auto;   
 }
+
 
 .reguler-txt {
   font-weight: 400;
@@ -233,6 +235,32 @@ h3 {
   text-align: left;
   color: white;
 }
+
+/*Error message*/
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff4e4e;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+  pointer-events: auto;
+  bottom: 50px;
+}
+
 
 /* Animations */
 @keyframes fadeIn {
