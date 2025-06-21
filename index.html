@@ -11,30 +11,28 @@
 </head>
 <body>
   <main class="main-container">
-    <!-- Search Header -->
+    <!-- Search bar Header -->
     <header class="input-container">
       <input class="city-input" placeholder="Enter city ..." type="text" id="city-input" />
       <button class="search-btn">
         <span class="material-symbols-outlined">search</span>
       </button>
     </header>
-
     <!-- Main Weather Section -->
     <section class="weather-top">
       <!-- Left Block -->
       <div class="weather-left">
         <div class="location">
           <span class="material-symbols-outlined">location_on</span>
-          <h4>Colombo</h4>
+          <h5>Colombo</h5>
         </div>
-        <p class="current-date-txt reguler-txt">Sun, 15 June</p>
+        <p class="current-date-txt reguler-txt"></p>
         <img class="weather-icon" src="#" alt="weather" />
         <h2 class="temperature">32°C</h2>
         <p class="weather-desc reguler-txt">
           <span class="material-symbols-outlined">wb_sunny</span> Sunny
         </p>
       </div>
-
       <!-- Right Block -->
       <div class="weather-right">
         <div class="info-item">
@@ -71,7 +69,6 @@
         </div>
       </div>
     </section>
-
     <!-- Forecast Section -->
     <h3>5 Days Forecast</h3>
     <section class="forecast-container">
@@ -102,7 +99,8 @@
       </div>
     </section>
   </main>
-  <div id="toast" class="toast hide">City not found or API error.</div>
+  <!-- error message -->
+  <div id="toast" class="toast hide"></div>
   <script type="module" src="/src/main.js"></script>
 </body>
 </html>
