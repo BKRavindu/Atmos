@@ -96,16 +96,16 @@ async function getWeather(city) {
       { icon: "humidity_percentage", text: `Humidity: ${current.humidity}%` },
       {
         icon: "air",
-        text: `Wind: ${current.wind_kph} km/h, ${current.wind_dir}`,
+        text: `Wind: ${current.wind_kph} km/h`,
       },
       { icon: "wb_iridescent", text: `UV Index: ${getUvCategory(current.uv)}` },
       { icon: "wb_twilight", text: `Sun rise: ${astro.sunrise}` },
-      { icon: "water_lux", text: `Sun set: ${astro.sunset}` },
-      { icon: "nights_stay", text: `Moon rise: ${astro.moonrise}` },
-      { icon: "bedtime", text: `Moon set: ${astro.moonset}` },
+      { icon: "dew_point", text: `Dew point: ${current.dewpoint_c} °C` },
+      { icon: "explore", text: `Wind direction: ${current.wind_degree}°` },
+      { icon: "visibility", text: `Visibility: ${current.vis_km} km` },
       {
-        icon: "brightness_2",
-        text: `illumination: ${astro.moon_illumination}%`,
+        icon: "tire_repair",
+        text: `Pressure: ${current.pressure_mb} mb`,
       },
     ];
 
