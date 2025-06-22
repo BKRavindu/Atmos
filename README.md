@@ -18,7 +18,6 @@ A modern and responsive weather web application that displays the current weathe
 - 🔎 **City search** input with real-time weather updates
 - 📅 **5-day weather forecast**
 - 🌇 Shows **sunrise**, **sunset**, **moonrise**, and **moonset**
-- 🌙 Includes **moon illumination percentage**
 - 🎨 Modern **glassmorphic UI** with Material Symbols
 - 📱 Fully **responsive design** (mobile/tablet/desktop)
 - ⚠️ Custom **toast notifications** for error handling (e.g., city not found)
