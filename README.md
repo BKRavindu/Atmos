@@ -14,10 +14,10 @@ A modern and responsive weather web application that displays the current weathe
 - 🌬️ Displays **wind speed**
 - 🔆 UV **Index information**
 
-### 🧠 Additional Features (Extra Credit)
+### 🧠 Additional Features
 - 🔎 **City search** input with real-time weather updates
 - 📅 **5-day weather forecast**
-- 🌇 Shows **sunrise**, **sunset**, **moonrise**, and **moonset**
+- 🌇 Shows **Dew Point**, **Wind direction**, **Visibility**, and **Preasure**
 - 🎨 Modern **glassmorphic UI** with Material Symbols
 - 📱 Fully **responsive design** (mobile/tablet/desktop)
 - ⚠️ Custom **toast notifications** for error handling (e.g., city not found)
@@ -35,7 +35,7 @@ A modern and responsive weather web application that displays the current weathe
 | **WeatherAPI.com** | Weather data source (`current.json` & `forecast.json`) |
 | **Vercel**       | Deployment platform                     |
 | **Google Fonts & Material Symbols** | Custom fonts and icons |
-| **Vite**         | Frontend build tool (for local dev, env vars, bundling) |
+| **Proxy Server**         | To hide the API key from the frontend |
 
 ## ⚙️ How to Run Locally
 
@@ -61,18 +61,18 @@ npm install
 Create a `.env` file in the root directory and add the following line:
 
 ```env
-VITE_API_KEY=your_api_key_here
+WEATHER_API_KEY=your_api_key_here
 ```
 
 ### 5. Run the app locally
 
 ```bash
-npm run dev
+vercel dev
 ```
 
 By default, the app will be available at:
 
 ```
-http://localhost:5173
+http://localhost:3000
 ```
 
