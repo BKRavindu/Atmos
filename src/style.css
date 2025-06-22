@@ -14,11 +14,18 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  padding: 40px 0; 
-  overflow-x: hidden; 
-  overflow-y: auto;   
+  padding: 40px 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  animation: bodyFade 1s ease;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
+@keyframes bodyFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
 .reguler-txt {
   font-weight: 400;
@@ -27,16 +34,21 @@ body {
 .main-container {
   width: 90%;
   max-width: 800px;
-  background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
-  border-radius: 20px;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
-  padding: 30px 20px;
+  background: linear-gradient(145deg, rgba(32, 32, 32, 0.9), rgba(48, 48, 48, 0.85));
+  border-radius: 24px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.6);
+  padding: 35px 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
   animation: fadeIn 0.8s ease-in-out;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.main-container:hover {
+  transform: scale(1.01);
 }
 
 .input-container {
@@ -50,17 +62,17 @@ body {
   width: 100%;
   padding: 14px 50px 14px 20px;
   border-radius: 999px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.15);
   background: rgba(255, 255, 255, 0.06);
   outline: none;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.9);
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
   backdrop-filter: blur(6px);
 }
 
 .city-input:focus {
-  border-color: rgba(255, 255, 255, 0.5);
+  border-color: #ffd369;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -76,18 +88,18 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.9);
+  color: #ffd369;
   font-size: 24px;
   padding: 4px;
-  transition: 0.2s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .search-btn:hover {
   color: white;
-  transform: translateY(-50%) scale(1.1);
+  transform: translateY(-50%) scale(1.2);
 }
 
-/* Weather Info section */
+/* Weather Information section */
 .weather-top {
   display: flex;
   justify-content: space-between;
@@ -99,7 +111,7 @@ body {
 
 /* Left Block */
 .weather-left {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   border-radius: 15px;
   padding: 15px;
   color: white;
@@ -112,8 +124,9 @@ body {
   text-align: center;
   gap: 12px;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
   backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.03);
 }
 
 .location {
@@ -128,6 +141,13 @@ body {
   width: 100px;
   height: 100px;
   transition: transform 0.3s ease;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.9; }
 }
 
 .weather-left:hover .weather-icon {
@@ -135,19 +155,21 @@ body {
 }
 
 .temperature {
-  font-size: 32px;
+  font-size: 34px;
   color: #ffd369;
+  font-weight: 700;
 }
 
 .weather-desc {
-  font-size: 16px;
+  font-size: 15px;
+  font-style: italic;
   font-weight: 400;
-  color: #ddd;
+  color: #e2e2e2;
 }
 
 /* Right Block */
 .weather-right {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   border-radius: 15px;
   padding: 20px;
   color: white;
@@ -158,8 +180,9 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 14px 20px;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
   backdrop-filter: blur(10px);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.03);
+  transition: all 0.3s ease-in-out;
 }
 
 .info-item {
@@ -167,26 +190,26 @@ body {
   align-items: center;
   gap: 10px;
   background: rgba(255, 255, 255, 0.03);
-  padding: 8px 10px;
-  border-radius: 8px;
+  padding: 10px 12px;
+  border-radius: 10px;
   transition: 0.3s ease;
 }
 
 .info-item span {
-  font-size: 22px;
+  font-size: 20px;
   color: #ccc;
   transition: color 0.3s ease;
 }
 
 .info-item:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .info-item:hover span {
-  color: #fff;
+  color: #ffd369;
 }
 
-/* Forecast sectio */
+/* Forecast section */
 .forecast-container {
   width: 100%;
   display: flex;
@@ -207,6 +230,7 @@ body {
   flex-grow: 1;
   transition: transform 0.3s ease, background 0.3s ease;
   backdrop-filter: blur(6px);
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.03);
 }
 
 .forecast-item:hover {
@@ -236,19 +260,19 @@ h3 {
   color: white;
 }
 
-/*Error message*/
+/* Error message */
 .toast {
   position: fixed;
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  background: #ff4e4e;
+  background: linear-gradient(135deg, #ff4e4e, #ff7979);
   color: #fff;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: 500;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: 600;
   font-size: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 20px rgba(255, 0, 0, 0.4);
   opacity: 0;
   pointer-events: none;
   transition: all 0.4s ease;
@@ -260,7 +284,6 @@ h3 {
   pointer-events: auto;
   bottom: 50px;
 }
-
 
 /* Animations */
 @keyframes fadeIn {
@@ -320,5 +343,9 @@ h3 {
   .weather-icon {
     width: 80px;
     height: 80px;
+  }
+
+  .main-container {
+    padding: 20px 15px;
   }
 }
