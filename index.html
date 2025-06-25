@@ -1,105 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Atmos</title>
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"/>
-  <link rel="stylesheet" href="./src/style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <main class="main-container">
-    <!-- Search bar Header -->
-    <header class="input-container">
-      <input class="city-input" placeholder="Enter city ..." type="text" id="city-input" />
-      <button class="search-btn">
-        <span class="material-symbols-outlined">search</span>
-      </button>
-    </header>
-    <!-- Main Weather Section -->
-    <section class="weather-top">
-      <!-- Left Block -->
-      <div class="weather-left">
-        <div class="location">
-          <span class="material-symbols-outlined">location_on</span>
-          <h5>Colombo</h5>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atmos</title>
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="main-container">
+      <!-- Search bar Header -->
+      <header class="input-container">
+        <input
+          class="city-input"
+          placeholder="Enter city ..."
+          type="text"
+          id="city-input"
+        />
+        <button class="search-btn">
+          <span class="material-symbols-outlined">search</span>
+        </button>
+      </header>
+      <!-- Main Weather Section -->
+      <section class="weather-top">
+        <!-- Left Block -->
+        <div class="weather-left">
+          <div class="location">
+            <span class="material-symbols-outlined">location_on</span>
+            <h5>Colombo</h5>
+          </div>
+          <p class="current-date-txt reguler-txt"></p>
+          <img class="weather-icon" src="#" alt="weather" />
+          <h3 class="temperature">temperature</h3>
+          <p class="weather-desc reguler-txt">
+            <span class="material-symbols-outlined">wb_sunny</span> Sunny
+          </p>
         </div>
-        <p class="current-date-txt reguler-txt"></p>
-        <img class="weather-icon" src="#" alt="weather" />
-        <h2 class="temperature">temperature</h2>
-        <p class="weather-desc reguler-txt">
-          <span class="material-symbols-outlined">wb_sunny</span> Sunny
-        </p>
-      </div>
-      <!-- Right Block -->
-      <div class="weather-right">
-        <div class="info-item">
-          <span class="material-symbols-outlined">humidity_percentage</span>
-          <p>Humidity</p>
+        <!-- Right Block -->
+        <div class="weather-right">
+          <div class="info-item">
+            <span class="material-symbols-outlined">humidity_percentage</span>
+            <p>Humidity</p>
+          </div>
+          <div class="info-item">
+            <span class="material-symbols-outlined">air</span>
+            <p>Wind</p>
+          </div>
+          <div class="info-item">
+            <span class="material-symbols-outlined">wb_iridescent</span>
+            <p>UV Index</p>
+          </div>
+          <div class="info-item">
+            <span class="material-symbols-outlined">wb_twilight</span>
+            <p>Sun rise</p>
+          </div>
+          <div class="info-item">
+            <span class="material-symbols-outlined">dew_point</span>
+            <p>dew point</p>
+          </div>
+          <div class="info-item">
+            <span class="material-symbols-outlined">explore</span>
+            <p>Wind direction</p>
+          </div>
+          <div class="info-item">
+            <span class="material-symbols-outlined">visibility</span>
+            <p>visibility</p>
+          </div>
+          <div class="info-item">
+            <span class="material-symbols-outlined">tire_repair</span>
+          </div>
         </div>
-        <div class="info-item">
-          <span class="material-symbols-outlined">air</span>
-          <p>Wind</p>
+      </section>
+      <!-- Forecast Section -->
+      <h3>5 Days Forecast</h3>
+      <section class="forecast-container">
+        <div class="forecast-item">
+          <p class="day"></p>
+          <img
+            src="https://openweathermap.org/img/wn/02d@2x.png"
+            alt="forecast"
+          />
+          <p class="temp">30°C</p>
         </div>
-        <div class="info-item">
-          <span class="material-symbols-outlined">wb_iridescent</span>
-          <p>UV Index</p>
+        <div class="forecast-item">
+          <p class="day"></p>
+          <img
+            src="https://openweathermap.org/img/wn/03d@2x.png"
+            alt="forecast"
+          />
+          <p class="temp">29°C</p>
         </div>
-        <div class="info-item">
-          <span class="material-symbols-outlined">wb_twilight</span>
-          <p>Sun rise</p>
+        <div class="forecast-item">
+          <p class="day"></p>
+          <img
+            src="https://openweathermap.org/img/wn/04d@2x.png"
+            alt="forecast"
+          />
+          <p class="temp">28°C</p>
         </div>
-        <div class="info-item">
-          <span class="material-symbols-outlined">dew_point</span>
-          <p>dew point</p>
+        <div class="forecast-item">
+          <p class="day"></p>
+          <img
+            src="https://openweathermap.org/img/wn/04d@2x.png"
+            alt="forecast"
+          />
+          <p class="temp">29°C</p>
         </div>
-        <div class="info-item">
-          <span class="material-symbols-outlined">explore</span>
-          <p>Wind direction</p>
+        <div class="forecast-item">
+          <p class="day"></p>
+          <img
+            src="https://openweathermap.org/img/wn/04d@2x.png"
+            alt="forecast"
+          />
+          <p class="temp">30°C</p>
         </div>
-        <div class="info-item">
-          <span class="material-symbols-outlined">visibility</span>
-          <p>visibility</p>
-        </div>
-        <div class="info-item">
-          <span class="material-symbols-outlined">tire_repair</span>
-        </div>
-      </div>
-    </section>
-    <!-- Forecast Section -->
-    <h3>5 Days Forecast</h3>
-    <section class="forecast-container">
-      <div class="forecast-item">
-        <p class="day"></p>
-        <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="forecast" />
-        <p class="temp">30°C</p>
-      </div>
-      <div class="forecast-item">
-        <p class="day"></p>
-        <img src="https://openweathermap.org/img/wn/03d@2x.png" alt="forecast" />
-        <p class="temp">29°C</p>
-      </div>
-      <div class="forecast-item">
-        <p class="day"></p>
-        <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="forecast" />
-        <p class="temp">28°C</p>
-      </div>
-      <div class="forecast-item">
-        <p class="day"></p>
-        <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="forecast" />
-        <p class="temp">29°C</p>
-      </div>
-      <div class="forecast-item">
-        <p class="day"></p>
-        <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="forecast" />
-        <p class="temp">30°C</p>
-      </div>
-    </section>
-  </main>
-  <!-- error message -->
-  <div id="toast" class="toast hide"></div>
-  <script type="module" src="/src/main.js"></script>
-</body>
+      </section>
+    </main>
+    <!-- error message -->
+    <div id="toast" class="toast hide"></div>
+    <script type="module" src="/src/main.js"></script>
+    <div id="loader" class="loader hidden">
+      <div class="spinner"></div>
+      <p>Loading...</p>
+    </div>
+  </body>
 </html>
