@@ -1,5 +1,4 @@
 const input = document.getElementById("city-input");
-const suggestionBox = document.getElementById("suggestions");
 
 document.addEventListener("DOMContentLoaded", () => {
   getWeather("Colombo");
@@ -10,53 +9,25 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-input.addEventListener("input", async () => {
-  const query = input.value.trim();
-  if (query.length === 0) {
-    suggestionBox.innerHTML = "";
-    return;
-  }
+function showLoader() {
+  document.getElementById("loader").classList.remove("hidden");
+}
 
-  try {
-    const res = await fetch(`/api/search?q=${query}`);;
-
-    const suggestions = await res.json();
-
-    suggestionBox.innerHTML = "";
-    suggestions.forEach((place) => {
-      const li = document.createElement("li");
-      li.textContent = `${place.name}, ${place.country}`;
-      li.addEventListener("click", () => {
-        input.value = place.name;
-        suggestionBox.innerHTML = "";
-        getWeather(place.name);
-      });
-      suggestionBox.appendChild(li);
-    });
-  } catch (err) {
-    console.error("Autocomplete error:", err);
-  }
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector(".search-btn").addEventListener("click", () => {
-    const city = document.getElementById("city-input").value.trim();
-    if (city) getWeather(city);
-  });
-});
+function hideLoader() {
+  document.getElementById("loader").classList.add("hidden");
+}
 
 async function getWeather(city) {
   try {
-    const res = await fetch(`/api/forecast?city=${city}`);
+    showLoader(); // Show spinner
 
+    const res = await fetch(`/api/forecast?city=${city}`);
     const data = await res.json();
 
-    // Update location name with country
     document.querySelector(
       ".location h5"
     ).textContent = `${data.location.name}, ${data.location.country}`;
 
-    // Update date
     const dateObj = new Date(data.location.localtime);
     const formattedDate = dateObj.toLocaleDateString("en-US", {
       weekday: "short",
@@ -72,41 +43,31 @@ async function getWeather(city) {
       ".current-date-txt"
     ).textContent = `${formattedDate} - ${formattedTime}`;
 
-    // Update weather icon
     document.querySelector(
       ".weather-icon"
     ).src = `https:${data.current.condition.icon}`;
 
-    // Update temperature
     document.querySelector(
       ".temperature"
     ).textContent = `${data.current.temp_c}°C`;
 
-    // Update weather description
     document.querySelector(".weather-desc").innerHTML = `
       <span class="material-symbols-outlined">wb_sunny</span> ${data.current.condition.text}
     `;
 
-    // Update right side info items
     const infoItems = document.querySelectorAll(".weather-right .info-item");
     const astro = data.forecast.forecastday[0].astro;
     const current = data.current;
 
     const values = [
       { icon: "humidity_percentage", text: `Humidity: ${current.humidity}%` },
-      {
-        icon: "air",
-        text: `Wind: ${current.wind_kph} km/h`,
-      },
+      { icon: "air", text: `Wind: ${current.wind_kph} km/h` },
       { icon: "wb_iridescent", text: `UV Index: ${getUvCategory(current.uv)}` },
       { icon: "wb_twilight", text: `Sun rise: ${astro.sunrise}` },
       { icon: "dew_point", text: `Dew point: ${current.dewpoint_c} °C` },
       { icon: "explore", text: `Wind direction: ${current.wind_degree}°` },
       { icon: "visibility", text: `Visibility: ${current.vis_km} km` },
-      {
-        icon: "tire_repair",
-        text: `Pressure: ${current.pressure_mb} mb`,
-      },
+      { icon: "tire_repair", text: `Pressure: ${current.pressure_mb} mb` },
     ];
 
     infoItems.forEach((item, i) => {
@@ -116,7 +77,6 @@ async function getWeather(city) {
       `;
     });
 
-    // Update forecast section
     const forecastElements = document.querySelectorAll(".forecast-item");
     const forecastData = data.forecast.forecastday;
 
@@ -138,10 +98,11 @@ async function getWeather(city) {
     });
   } catch (err) {
     showToast("City not found.");
+  } finally {
+    hideLoader(); // Always hide loader
   }
 }
 
-//Error message
 function showToast(message) {
   const toast = document.getElementById("toast");
   toast.textContent = message;
@@ -153,7 +114,7 @@ function showToast(message) {
     toast.classList.add("hide");
   }, 3000);
 }
-//UV section according to value
+
 function getUvCategory(uv) {
   if (uv <= 2) return "Low";
   else if (uv <= 5) return "Moderate";
